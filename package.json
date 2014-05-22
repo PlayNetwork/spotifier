@@ -1,0 +1,27 @@
+{
+  "name": "spotifier",
+  "version": "0.1.0",
+  "description": "a client library for searching songs within Spotify and retrieving the nearest match",
+  "keywords": [
+    "spotify",
+    "song",
+    "track",
+    "search"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "gulp jshint"
+  },
+  "author": "PlayNetwork",
+  "license": "MIT",
+  "dependencies": {
+    "levenshtein": "~1.0.4",
+    "request": "~2.34.0",
+    "unidecode": "~0.1.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-jshint": "^1.5.5",
+    "jshint-stylish": "^0.2.0"
+  }
+}
