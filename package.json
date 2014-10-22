@@ -1,10 +1,10 @@
 {
   "name": "spotifier",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a client library for searching songs within Spotify and retrieving the nearest match",
   "repository": {
-    "type" : "git",
-    "url" : "http://github.com/PlayNetwork/spotifier.git"
+    "type": "git",
+    "url": "http://github.com/PlayNetwork/spotifier.git"
   },
   "keywords": [
     "spotify",
