@@ -3,8 +3,7 @@ var
 
 	client = spotifier();
 
-
-client.findBestMatch('beck loser', function (err, result) {
+client.findBestMatch('beck', 'loser', function (err, result) {
 	if (err) {
 		console.error(err);
 	}
@@ -13,11 +12,11 @@ client.findBestMatch('beck loser', function (err, result) {
 	console.log(result);
 });
 
-client.search('beck loser', function (err, result) {
+client.search({ limit : 2 }, 'beck', 'loser', function (err, result) {
 	if (err) {
 		console.error(err);
 	}
 
 	console.log('search:');
-	console.log(result);
+	console.log(JSON.stringify(result, 0, 2));
 });
