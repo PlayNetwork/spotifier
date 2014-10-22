@@ -3,7 +3,7 @@ var
 
 	client = spotifier();
 
-client.findBestMatch('beck', 'loser', function (err, result) {
+client.findBestMatch('foo fighters', 'breakout', function (err, result) {
 	if (err) {
 		console.error(err);
 	}

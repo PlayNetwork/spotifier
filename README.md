@@ -17,7 +17,7 @@ var spotifier = require('spotifier');
 
 var client = spotifier();
 
-client.search('foo fighters breakout', function (err, result) {
+client.search('foo fighters', 'breakout', function (err, result) {
   // work with results here...
 });
 ```
