@@ -1,3 +1,7 @@
+# 0.2.1 - 2014.12.03
+
+* Updating sanitize internal function to filter less - fixes defect where occaisionally title and artist was blank
+
 # 0.2.0 - 2014.10.22
 
 * Simplify response from search
