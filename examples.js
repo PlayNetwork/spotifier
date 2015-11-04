@@ -3,20 +3,30 @@ var
 
 	client = spotifier();
 
-client.findBestMatch('foo fighters', 'breakout', function (err, result) {
+client.findBestMatch({ artist: 'foo fighters', title: 'breakout' }, function (err, result) {
 	if (err) {
 		console.error(err);
 	}
 
-	console.log('best match:');
+	console.log('best match by artist and title:');
 	console.log(result);
 });
 
-client.search({ limit : 2 }, 'beck', 'loser', function (err, result) {
+client.search({ limit : 2 }, { artist: 'beck', title: 'loser' }, function (err, result) {
 	if (err) {
 		console.error(err);
 	}
 
-	console.log('search:');
+	console.log('search by artist and title:');
 	console.log(JSON.stringify(result, 0, 2));
+});
+
+
+client.findBestMatch({ isrc: 'USGF19463401' }, function (err, result) {
+	if (err) {
+		console.error(err);
+	}
+
+	console.log('best match by ISRC:');
+	console.log(result);
 });

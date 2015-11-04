@@ -1,8 +1,14 @@
-# 0.2.1 - 2014.12.03
+# v0.3.0 - 2015.11.04
+
+* Breaking interface change - search and findBestMatch accept `params` object now
+* Added support for lookup based on ISRC code
+* Added support for [Spotify Web API Client Credentials ](https://developer.spotify.com/web-api/authorization-guide/#client_credentials_flow)
+
+# v0.2.1 - 2014.12.03
 
 * Updating sanitize internal function to filter less - fixes defect where occaisionally title and artist was blank
 
-# 0.2.0 - 2014.10.22
+# v0.2.0 - 2014.10.22
 
 * Simplify response from search
 * Added support for search result limit
@@ -10,12 +16,12 @@
 * Changed query interface to support artist and title explicitly
 * Updated to use newer version of Spotify search API
 
-# 0.1.1 - 2014.10.22
+# v0.1.1 - 2014.10.22
 
 * Renamed internal constructor to reflect module name
 * Updated dependencies
 * Add repository for package.json file
 
-# 0.1.0 - 2014.05.22
+# v0.1.0 - 2014.05.22
 
 * Initial release
