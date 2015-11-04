@@ -10,20 +10,46 @@ npm install spotifier
 
 ## Usage:
 
-In your code, require the `spotifier` module as follows.
+In your code, require the `spotifier` module as follows:
+
+### Artist and Track search
 
 ```javascript
 var spotifier = require('spotifier');
 
-var client = spotifier();
+var
+  client = spotifier(),
+  params = {
+    artist : 'foo fighters',
+    title : 'breakout'
+  };
 
-client.search('foo fighters', 'breakout', function (err, result) {
+client.search(params, function (err, result) {
+  // work with results here...
+});
+```
+
+### ISRC search
+
+```javascript
+var spotifier = require('spotifier');
+
+var
+  client = spotifier(),
+  params = {
+    isrc : 'USWB10303069'
+  };
+
+client.search(params, function (err, result) {
   // work with results here...
 });
 ```
 
 ### Options:
 
+* authorizationUrl - URL of authorization endpoint (defaults to `https://accounts.spotify.com/api/token`)
+* clientId - Optional - when specified, client credentials are authenticated and the resulting access token is used for subsequent search requests
+* clientSecret - Optional - when specified, client credentials are authenticated and the resulting access token is used for subsequent search requests
 * searchResultLimit - Limit of results to return (defaults to 10)
 * searchUrl - URL of API endpoint (defaults to `https://api.spotify.com/v1/search`)
 * timeout - Timeout for request in milliseconds (defaults to `10000`)
@@ -32,6 +58,9 @@ client.search('foo fighters', 'breakout', function (err, result) {
 var spotifier = require('spotifier');
 
 var client = spotifier({
+  authorizationUrl : 'https://accounts.spotify.com/api/token',
+  clientId : '<client_id value here>',
+  clientSecret : '<client_secret value here>',
   searchResultLimit : 10,
   searchUrl : 'https://api.spotify.com/v1/search',
   timeout : 10000
@@ -45,9 +74,14 @@ Find the single best match for a search:
 `client.findBestMatch(artist, title, callback)`
 
 ```javascript
-var client = (require('spotifier')());
+var
+  client = (require('spotifier')()),
+  params = {
+    artist : 'foo fighters',
+    title : 'breakout'
+  };
 
-client.findBestMatch('beck', 'loser', function (err, result) {
+client.findBestMatch(params, function (err, result) {
   if (err) {
     console.error(err);
   }
@@ -208,7 +242,7 @@ Which returns the following response:
 
 Find all matches for a search:
 
-`client.search(options, artist, title, callback)`
+`client.search(options, params, callback)`
 
 _Please note, the `options` parameter is optional and can be omitted_
 
@@ -218,9 +252,13 @@ var
   options = {
     limit : 2,
     start : 0
+  },
+  params = {
+    artist : 'beck',
+    title : 'loser'
   };
 
-client.search(options, 'beck', 'loser', function (err, result) {
+client.search(options, params, function (err, result) {
   if (err) {
     console.error(err);
   }
