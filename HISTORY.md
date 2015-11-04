@@ -1,3 +1,7 @@
+# v0.3.1 - 2015.11.04
+
+* Reworked how errors are returned when captured from Spotify API
+
 # v0.3.0 - 2015.11.04
 
 * Breaking interface change - search and findBestMatch accept `params` object now
