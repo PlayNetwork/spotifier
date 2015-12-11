@@ -69,19 +69,32 @@ var client = spotifier({
 
 ### Find Best Match
 
-Find the single best match for a search:
+Find the best match (or matches) for a search:
 
-`client.findBestMatch(artist, title, callback)`
+`client.findBestMatch(options, params, callback)`
+
+Where options is an _optional_ object supporting the following fields:
+
++ `multi` _(optional, boolean)_ - defaults to `false`, when `true` all the closest matches are returned as an array
+
+Where params is an object supporting the following fields:
+
++ `isrc` _(optional, string)_ - when specified, performs an ISRC search with Spotify
++ `artist` _(optional, string)_ - when specified (instead of `isrc`) performs an artist and title search with Spotify
++ `title` _(optional, string)_ - when specified (instead of `isrc`) performs an artist and title search with Spotify
 
 ```javascript
 var
   client = (require('spotifier')()),
+  options = {
+    multi : false
+  },
   params = {
     artist : 'foo fighters',
     title : 'breakout'
   };
 
-client.findBestMatch(params, function (err, result) {
+client.findBestMatch(options, params, function (err, result) {
   if (err) {
     console.error(err);
   }

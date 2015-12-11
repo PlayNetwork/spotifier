@@ -1,3 +1,7 @@
+# v0.3.2 - 2015.12.11
+
+* Added support for returning multiple closest matches for when multiple Spotify tracks match the same ISRC or the same artist and title
+
 # v0.3.1 - 2015.11.04
 
 * Reworked how errors are returned when captured from Spotify API
