@@ -1,3 +1,7 @@
+# v0.3.3 - 2015.01.14
+
+* Relaxed sanitization routine used to clean up search terms prior to sending to the Spotify API (no longer filtering out `*` characters)
+
 # v0.3.2 - 2015.12.11
 
 * Added support for returning multiple closest matches for when multiple Spotify tracks match the same ISRC or the same artist and title
