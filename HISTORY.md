@@ -1,3 +1,7 @@
+# v0.3.5 - 2016.05.12
+
+* Removed extraneous diagnostic code
+
 # v0.3.4 - 2016.05.12
 
 * Relaxed sanitization routined used to clean up search terms prior to sending to the Spotify API (no longer filtering out `(` and `)` characters)
