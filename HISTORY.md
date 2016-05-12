@@ -1,3 +1,7 @@
+# v0.3.4 - 2016.05.12
+
+* Relaxed sanitization routined used to clean up search terms prior to sending to the Spotify API (no longer filtering out `(` and `)` characters)
+
 # v0.3.3 - 2015.01.14
 
 * Relaxed sanitization routine used to clean up search terms prior to sending to the Spotify API (no longer filtering out `*` characters)

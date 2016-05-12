@@ -3,6 +3,7 @@ var
 
 	client = spotifier();
 
+
 client.findBestMatch({ artist: 'foo fighters', title: 'breakout' }, function (err, result) {
 	if (err) {
 		console.error(err);
