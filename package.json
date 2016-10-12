@@ -1,6 +1,6 @@
 {
   "name": "spotifier",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "a client library for searching songs within Spotify and retrieving the nearest match",
   "repository": {
     "type": "git",

@@ -50,6 +50,7 @@ client.search(params, function (err, result) {
 * authorizationUrl - URL of authorization endpoint (defaults to `https://accounts.spotify.com/api/token`)
 * clientId - Optional - when specified, client credentials are authenticated and the resulting access token is used for subsequent search requests
 * clientSecret - Optional - when specified, client credentials are authenticated and the resulting access token is used for subsequent search requests
+* market - Optional - when specified, searches for matching tracks will utilize the specified market
 * searchResultLimit - Limit of results to return (defaults to 10)
 * searchUrl - URL of API endpoint (defaults to `https://api.spotify.com/v1/search`)
 * timeout - Timeout for request in milliseconds (defaults to `10000`)
@@ -82,6 +83,7 @@ Where params is an object supporting the following fields:
 + `isrc` _(optional, string)_ - when specified, performs an ISRC search with Spotify
 + `artist` _(optional, string)_ - when specified (instead of `isrc`) performs an artist and title search with Spotify
 + `title` _(optional, string)_ - when specified (instead of `isrc`) performs an artist and title search with Spotify
++ `market` _(optional, string)_ - when specified, performs a search with with the specified market 
 
 ```javascript
 var
