@@ -1,3 +1,7 @@
+# v0.3.6 - 2016.10.12
+
+* Added support for `market` when searching
+
 # v0.3.5 - 2016.05.12
 
 * Removed extraneous diagnostic code
