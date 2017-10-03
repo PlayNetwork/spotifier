@@ -1,3 +1,7 @@
+# v0.4.0 - 2017.10.03
+
+* Added support for album retrieval
+
 # v0.3.6 - 2016.10.12
 
 * Added support for `market` when searching
